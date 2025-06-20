@@ -1,0 +1,7 @@
+echo "# SPX-Macros" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git branch -M main
+git remote add origin https://github.com/danQ101/SPX-Macros.git
+git push -u origin main
