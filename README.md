@@ -1,0 +1,10 @@
+Problem: Predict SPX movement during a known time macro window.
+Input: Market state before the macro.
+Output: Movement within the macro (e.g., significant up/down, no. ticks)
+I would commence data gathering using the most valuable variables. However, I was not conservative with the amount I included, to avoid potential mistakes down the line by not gathering enough information. So, more was better. For example, including the minute column which now seems quite insignificant but might be useful for identifying patterns that happen most commonly at the end of the day
+•	Planned to develop the model after the data for 100 time-based macros were gathered
+•	Decided to include the largest possible profit variable. I am not sure how useful this will be, having a model predict net return is more efficient currently. I have identified a trade-off between earnings and time looking at the market while an order is active. I can test this in future. 
+•	I believe the “significant move” variable would replace this LPP variable. I can make this the dependent variable also. 
+•	First test of the data and overall hypothesis:•	It predicted that the next macro would have a baseline downwards movement, with a chance of upwards reversal.
+•	As I was looking at the first minutes of the macro, I saw no initial downwards movement. This led to me wanting to increase certainty for likelihood of reversals. To do so, I added the “news within hour” variable. My thinking for this is that macros that occur close to news events opening are more volatile due to increased market indecision, leading to more frequent reversals, and thus greater chance for large moves.
+•	Ultimately this test gave me greater confidence for the project. This is because the simple gathering of data allowed a fairly accurate prediction, that a reversal and downwards move would occur during the macro. Also, I added a useful variable that will help improve profitability and prediction of activity within macros. But the plan is for the model to predict the movement (in ticks). 
